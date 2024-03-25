@@ -1,5 +1,5 @@
 "use client";
-//fake
+
 import {
   Grid2X2,
   Heart,
