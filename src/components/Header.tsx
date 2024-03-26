@@ -14,9 +14,9 @@ import { useRouter } from "next/navigation";
 import { FormEvent } from "react";
 
 export default function Header() {
+  const router = useRouter();
   const handelSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const router = useRouter();
 
     const input = e.currentTarget.input.value;
 

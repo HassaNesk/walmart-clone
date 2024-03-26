@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Walmart Clone 2.0",
-  description: "Created by hasCustomGetInitialProps.esk",
+  description: "Created by Hassan.esk",
 };
 
 export default function RootLayout({
