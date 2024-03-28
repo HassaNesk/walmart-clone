@@ -114,8 +114,8 @@ async function ProductPage({ searchParams: { url } }: Props) {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {product.specifications.map((s) => (
-              <TableRow>
+            {product.specifications.map((s,i) => (
+              <TableRow key={i}>
                 <TableCell className="font-medium">{s.key}</TableCell>
                 <TableCell>{s.value}</TableCell>
               </TableRow>
