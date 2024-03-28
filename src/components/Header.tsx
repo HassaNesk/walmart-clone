@@ -12,9 +12,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FormEvent } from "react";
+import { useCartStore } from "../../store";
+import { getCartTotal } from "@/lib/getCartTotal";
 
 export default function Header() {
   const router = useRouter();
+  const cart = useCartStore((s) => s.cart);
+
+  const total = getCartTotal(cart);
   const handelSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -90,8 +95,10 @@ export default function Header() {
         >
           <ShoppingCart size={20} />
           <div>
-            <p className="text-xs font-extralight">No Item</p>
-            <p>$0.00</p>
+            <p className="text-xs font-extralight">
+              {cart.length > 0 ? `${cart.length} items` : "No Item"}
+            </p>
+            <p>{total}</p>
           </div>
         </Link>
       </div>
