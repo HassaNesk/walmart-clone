@@ -19,7 +19,7 @@ export interface Product {
   meta: Meta;
   price: number;
   title: string;
-  image: string[];
+  images: string[];
   rating: Rating;
   seller: Seller;
   currency: string;
